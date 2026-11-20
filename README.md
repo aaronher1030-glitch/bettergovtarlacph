@@ -51,6 +51,8 @@ BetterGov's [BetterLGU guide](https://lgu.bettergov.ph/guide) recommends checkin
 
 ## Project documents
 
+- [Product ad (MP4)](docs/Better-Concepcion-SaaS-Style-Ad.mp4)
+- [Ad voice-over script](docs/Better-Concepcion-SaaS-Ad-Voiceover.md)
 - [Research brief](docs/RESEARCH_BRIEF.md)
 - [Concept note](docs/CONCEPT_NOTE.md)
 - [Information checklist](docs/INFORMATION_CHECKLIST.md)
@@ -58,6 +60,10 @@ BetterGov's [BetterLGU guide](https://lgu.bettergov.ph/guide) recommends checkin
 - [Prototype outline](docs/PROTOTYPE_OUTLINE.md)
 - [Data source register](docs/DATA_SOURCES.md)
 - [Contributing](CONTRIBUTING.md)
+
+## Visual direction
+
+The interface follows the task-first, source-forward approach used by community BetterLGU portals such as [BetterMapandan](https://bettermapandan.org/) and [BetterAlaminosCity](https://betteralaminoscity.org/): clear local identity, search-led discovery, practical topic links, and visible source context. The green, cream, and gold palette is adapted for this prototype; it does not use an LGU seal or claim official affiliation. The BetterLGU directory lists community portals and templates rather than prescribing one shared visual system.
 
 ## Before public launch
 

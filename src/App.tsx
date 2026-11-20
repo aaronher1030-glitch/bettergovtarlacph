@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import {
-  ArrowDown,
   ArrowUpRight,
   BookOpenText,
   Building2,
@@ -52,7 +51,7 @@ function App() {
       <div className="demo-notice">
         <ShieldCheck size={15} aria-hidden="true" />
         <span>
-          Independent community demo <span className="notice-dot">·</span> Not an official LGU website or service
+          Independent · Community-maintained · Not an official LGU website or service
         </span>
       </div>
 
@@ -65,7 +64,8 @@ function App() {
           </span>
         </a>
         <nav className="primary-nav" aria-label="Main navigation">
-          <a href="#records">Browse information</a>
+          <a href="#records">Services &amp; records</a>
+          <a href="#records">Transparency</a>
           <a href="#about">About this demo</a>
         </nav>
         <a
@@ -81,10 +81,10 @@ function App() {
       <main id="main-content">
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-inner">
-            <p className="eyebrow">PUBLIC INFORMATION FOR CONCEPCION, TARLAC</p>
-            <h1 id="hero-title">Find the right local information.</h1>
+            <p className="eyebrow">A COMMUNITY GUIDE TO LOCAL INFORMATION</p>
+            <h1 id="hero-title">Concepcion information, easier to find.</h1>
             <p className="hero-description">
-              A simple starting point for municipal services, local policies, offices, and public documents. Every result links to its original source.
+              Find municipal services, ordinances, offices, and public documents. Start with what you need, then follow the link to its original source.
             </p>
             <form
               className="search-form"
@@ -101,7 +101,7 @@ function App() {
               <input
                 id="record-search"
                 type="search"
-                placeholder="Try “ordinance”, “business”, or “charter”"
+                placeholder="Try “ordinance”, “department”, or “charter”"
                 value={query}
                 onChange={event => setQuery(event.target.value)}
               />
@@ -110,11 +110,14 @@ function App() {
               </button>
             </form>
             <p className="search-hint">
-              Search published links only. This demo does not submit forms or collect personal information.
+              Search the public links in this directory. No forms, sign-in, or personal information required.
             </p>
-            <a className="scroll-link" href="#records">
-              Browse all sources <ArrowDown size={15} aria-hidden="true" />
-            </a>
+            <div className="popular-searches" aria-label="Popular topics">
+              <span>Popular:</span>
+              <button type="button" onClick={() => { setQuery('charter'); setActiveCategory('All records'); document.getElementById('records')?.scrollIntoView({ behavior: 'smooth' }); }}>Citizen’s Charter</button>
+              <button type="button" onClick={() => { setQuery(''); setActiveCategory('Local policies'); document.getElementById('records')?.scrollIntoView({ behavior: 'smooth' }); }}>Ordinances</button>
+              <button type="button" onClick={() => { setQuery(''); setActiveCategory('Offices'); document.getElementById('records')?.scrollIntoView({ behavior: 'smooth' }); }}>Offices</button>
+            </div>
           </div>
         </section>
 
@@ -124,7 +127,7 @@ function App() {
               <p className="eyebrow eyebrow-green">SOURCE DIRECTORY</p>
               <h2 id="records-title">Browse public information</h2>
               <p className="section-description">
-                Choose a topic or search. Open the publisher’s page to read the full record.
+                Search by service, office, or document. Open the publisher’s page for the full record.
               </p>
             </div>
             <p className="checked-summary">Links checked {checkedAt}</p>
